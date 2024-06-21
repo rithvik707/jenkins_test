@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh './gradlew test'
+                sh 'ls -R build/test-results/test/'
             }
             post {
                 always {
